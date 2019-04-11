@@ -119,6 +119,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePi
         }
     }
     
+    //「イラスト合成」を押した時に呼ばれるメソッド
+    @IBAction func onTappedIllustButton(){
+        if photoImageView.image != nil {
+            photoImageView.image = drawMaskImage(image: photoImageView.image!)
+        }else{
+            print("画像がありません")
+        }
+    }
+    
     //「アップロード」ボタンを押した時に呼ばれるメソッド
     @IBAction func onTappedUploadButton(){
         if photoImageView.image != nil {
